@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins;wght@300;400;500;600;700;800;900&display=swap');
+
+@font-face{
+    font-family: Muzashi;
+    src:url(MUSASHI.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.navigation a{
+    text-decoration: none;
+    color:black;
+    padding: 6px 15px;
+    margin: 0 20px;
+    font-weight: 900;
+}
+
+.navigation a:hover{
+    border-bottom: 3px solid black;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#text-corgi{
+    font-family: Muzashi;
+    Position: absolute;
+    font-size: 15em;
+    color: #d68849;
+    z-index: 2; /* Ensure text is above the sky image but below the GIF */
+    text-shadow: 
+        1px 1px 0 #000, 
+        -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px 1px 0 #000,
+        2px 2px 0 #000, 
+        -2px -2px 0 #000, 
+        2px -2px 0 #000, 
+        -2px 2px 0 #000;
+}
+
+#sky {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Ensure sky image is at the bottom */
+    width: 56%
+}
+
+#gif {
+    position: absolute;
+    z-index: 3; /* Ensure GIF is above both text and sky image */
+    width: auto;
+    height: 50%;
+    bottom: 0; /* Adjust this value to move the GIF down */
+}
+
+.banner-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #000; /* Background color of the banner */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Padding for the banner */
+    box-sizing: border-box;
+    z-index: 1000; /* Ensures the banner is above other content */
+    overflow: hidden; /* Hide the overflow content */
+}
+
+.banner {
+    display: flex;
+    width: 200%; /* Double the width to accommodate duplicated content */
+    animation: scrollBanner 10s linear infinite; /* Infinite scroll animation */
+}
+
+.banner-content {
+    display: flex;
+    width: 50%; /* Each content block takes half the width */
+    justify-content: space-around;
+}
+
+.banner-content span {
+    display: inline-block;
+    padding: 0 15px;
+    font-size: 1.2em;
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.about {
+    position: relative;
+    padding: 100px 300px;
+    font-size: 1.2em;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+#ca{
+    padding:60px 20px;
+}
+.video-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 1050px;
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+
+
